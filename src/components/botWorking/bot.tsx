@@ -15,7 +15,7 @@ const Bot = () => {
     const [chat, setChat] = useState<ChatSession>()
     const [error, setError] = useState("")
 
-    const API_KEY="AIzaSyDHQIawdDyQyjsWjOHEg0okUWCLUbBHJC8"
+    const API_KEY=process.env.NEXT_PUBLIC_GEMINI_API
     console.log(API_KEY)
     const MODEL_NAME="gemini-1.0-pro"
 
