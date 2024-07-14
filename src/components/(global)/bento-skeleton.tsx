@@ -266,7 +266,7 @@ import Image from "next/image";
             className="rounded-full h-10 w-10"
           />
           <p className="text-xs text-neutral-500">
-          Hi, I've been having persistent headaches lately. Can you help?
+          Hi, I&apos;ve been having persistent headaches lately. Can you help?
           </p>
         </motion.div>
         <motion.div
@@ -295,7 +295,7 @@ import Image from "next/image";
       title: "Empowering Health Discovery",
       description: (
         <span className="text-sm">
-          Seamlessly detect diseases through our chatbot's advanced diagnostic capabilities, revolutionizing proactive healthcare.
+          Seamlessly detect diseases through our chatbot&apos;s advanced diagnostic capabilities, revolutionizing proactive healthcare.
         </span>
       ),
       header: <SkeletonTwo />,

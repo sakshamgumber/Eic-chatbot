@@ -40,15 +40,15 @@ const Sidebar = () => {
   return (
     <nav className=' dark:bg-black px-2 py-6 flex h-screen flex-col justify-between items-center overflow-scroll gap-10'>
      <div className='flex flex-col items-center justify-center gap-8'>
-        <Link href={"/"}>Oversee.</Link>
+        <Link href={"/"}>Oversee</Link>
         
           <TooltipProvider>
                     {
-                        sideList.map((items)=><ul>
+                        sideList.map((items)=><ul key={items.name}>
 
                         <Tooltip delayDuration={0}>
                             <TooltipTrigger>
-                                <li key={items.name}>
+                                <li>
                                     <Link href={items.href}
                                     className={clsx('cursor-pointer rounded-lg scale-[1.5] p-3px group flex items-center justify-center h-3 w-8',{
                                         'dark:bg-[#2F006B] bg-[#EEE0FF]':pathName===items.href
@@ -70,7 +70,7 @@ const Sidebar = () => {
                     }
           </TooltipProvider>
 
-          <Separator />
+          {/* <Separator />
 
           <div className='h-52 rounded-full overflow-scroll px-2 py-4 dark:bg-[#353346] flex flex-col gap-9 items-center border-[1px] relative'>
              <div className='relative dark:bg-[#353346]/70 p-2 rounded-full dark:border-t-[1px] border-[1px] dark:border-t-[#353346]'>
@@ -89,7 +89,7 @@ const Sidebar = () => {
                    <GitBranch className=' text-muted-foreground' size={18}/>
              </div>
             
-          </div>
+          </div> */}
           <ModeToggle/>
         </div>
     </nav>
