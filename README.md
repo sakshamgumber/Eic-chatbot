@@ -24,13 +24,15 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ```mermaid
 flowchart TD
-    A[Bootstrapped with create-next-app] --> B[Install Dependencies]
-    B --> C[Run Development Server]
-    C --> D[Open Browser at localhost:3000]
-    D --> E[Edit app/page.tsx]
-    E --> F[Changes Auto-Reload]
-    F --> G[Utilize next/font for Optimization]
-    G --> H[Deploy on Vercel]
+    A[Developer] --> B[Run Dev Server<br>(npm run dev)]
+    B --> C[Next.js Server starts<br>on Port 3000]
+    C --> D[Browser opens http://localhost:3000]
+    D --> E[React Component Renders<br>(e.g., app/page.tsx)]
+    E --> F[Call API Integration]
+    F --> G[useGetCallById Hook<br>fetches call data]
+    G --> H[Components render call details]
+    H --> I[Hot Reloading on Code Changes]
+    I --> D
 ```
 
 ## Learn More
