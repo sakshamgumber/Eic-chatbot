@@ -22,26 +22,28 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 # Project Flow Diagram
 
-```mermaid
 flowchart TD
-    A[Home Page] --> B[Work Register]
-    A --> C[Work Login]
-    A --> D[Cont Register]
-    A --> E[Cont Login]
-    B --> C
-    D --> E
-    C --> F[Work Dashboard]
-    E --> G[Cont Dashboard]
-    G --> H[Create Job]
-    G --> I[Job List]
-    F --> I
-    I --> J[Fill Form]
-    F --> K[Past Forms]
-    J --> F
-    F --> L[Logout]
-    G --> L
-    A --> M[About]
-```
+    %% Developer Action
+    A[Developer] --> B["Run Dev Server\n(npm run dev)"]
+
+    %% Server Start
+    B --> C["Next.js Server starts\non Port 3000"]
+
+    %% Browser Flow
+    C --> D["Browser opens http://localhost:3000"]
+
+    %% React Rendering
+    D --> E["React Component Renders\n(e.g., app/page.tsx)"]
+
+    %% API Integration
+    E --> F["Call API Integration"]
+    F --> G["useGetCallById Hook\nfetches call data"]
+    G --> H["Components render call details"]
+
+    %% Hot Reloading
+    H --> I["Hot Reloading on Code Changes"]
+    I --> D
+
 
 ## Learn More
 
