@@ -20,17 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Project Flow Diagram
+# Project Flow Diagram
+
+```mermaid
 flowchart TD
-    A[Developer] --> B["Run Dev Server\n(npm run dev)"]
-    B --> C["Next.js Server starts\non Port 3000"]
-    C --> D["Browser opens http://localhost:3000"]
-    D --> E["React Component Renders\n(e.g., app/page.tsx)"]
-    E --> F["Call API Integration"]
-    F --> G["useGetCallById Hook\nfetches call data"]
-    G --> H["Components render call details"]
-    H --> I["Hot Reloading on Code Changes"]
-    I --> D
+    A[Home Page] --> B[Work Register]
+    A --> C[Work Login]
+    A --> D[Cont Register]
+    A --> E[Cont Login]
+    B --> C
+    D --> E
+    C --> F[Work Dashboard]
+    E --> G[Cont Dashboard]
+    G --> H[Create Job]
+    G --> I[Job List]
+    F --> I
+    I --> J[Fill Form]
+    F --> K[Past Forms]
+    J --> F
+    F --> L[Logout]
+    G --> L
+    A --> M[About]
+```
 
 ## Learn More
 
